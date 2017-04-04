@@ -11,11 +11,16 @@ namespace headless_ie
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            string url = "";
+            if (args.Length > 0)
+            {
+                url = args[0];
+            }
+            Application.Run(new frmMain(url));
         }
     }
 }
