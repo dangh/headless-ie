@@ -15,7 +15,7 @@ namespace headless_ie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            string url = "";
+            string url = "google.com";
             if (args.Length > 0)
             {
                 url = args[0];
